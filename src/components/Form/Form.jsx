@@ -26,7 +26,10 @@ export default function Form({ inputs, button }) {
 
 Form.propTypes = {
   inputs: PropTypes.arrayOf(
-    PropTypes.shape({ type: PropTypes.string, label: PropTypes.string })
+    PropTypes.shape({
+      type: PropTypes.string,
+      label: PropTypes.string.isRequired,
+    })
   ).isRequired,
   button: PropTypes.string.isRequired,
 };
