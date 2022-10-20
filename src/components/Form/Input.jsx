@@ -20,6 +20,10 @@ export default function Input({ type, label }) {
 }
 
 Input.propTypes = {
-  type: PropTypes.string.isRequired,
+  type: PropTypes.string,
   label: PropTypes.string.isRequired,
+};
+
+Input.defaultProps = {
+  type: "text",
 };
