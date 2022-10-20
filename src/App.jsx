@@ -6,8 +6,8 @@ const loginForm = {
   header: { title: "Login" },
   form: {
     inputs: [
-      { type: "email", label: "Email" },
-      { type: "password", label: "Password" },
+      { id: 1, type: "email", label: "Email" },
+      { id: 2, type: "password", label: "Password" },
     ],
     button: {
       txt: "Login",

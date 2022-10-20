@@ -4,7 +4,9 @@ import Input from "./Input";
 
 // function to render array of inputs
 function renderInputs(fields) {
-  return fields.map((inputNum) => Input(inputNum));
+  return fields.map((inputNum) => (
+    <Input key={inputNum.id} label={inputNum.label} type={inputNum.type} />
+  ));
 }
 
 // Form function
