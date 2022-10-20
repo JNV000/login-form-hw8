@@ -20,7 +20,7 @@ export default function Input({ type, label }) {
 }
 
 Input.propTypes = {
-  type: PropTypes.oneOf(["email", "password"]),
+  type: PropTypes.oneOf(["email", "password", "text"]),
   label: PropTypes.string.isRequired,
 };
 
