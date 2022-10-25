@@ -1,6 +1,10 @@
 import PropTypes from "prop-types";
 
 export default function Input({ type, label }) {
+  // technically this is already uncontrolled
+  // we can make refs
+  // const inputRef = useRef(); // we don't need to though
+
   return (
     <div className="mt-4 flex flex-col">
       <label
@@ -14,6 +18,7 @@ export default function Input({ type, label }) {
         type={type}
         id={label}
         placeholder={label}
+        // ref={inputRef}
       />
     </div>
   );
