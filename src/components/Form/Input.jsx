@@ -1,6 +1,10 @@
 import PropTypes from "prop-types";
+import { useState } from "react";
 
 export default function Input({ type, label }) {
+  // hook/useState to update inputs value
+  const [userInput, setInput] = useState("");
+
   return (
     <div className="mt-4 flex flex-col">
       <label
@@ -14,6 +18,8 @@ export default function Input({ type, label }) {
         type={type}
         id={label}
         placeholder={label}
+        value={userInput}
+        onChange={(e) => setInput(e.target.value)}
       />
     </div>
   );
