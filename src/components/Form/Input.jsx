@@ -4,6 +4,7 @@ import { useState } from "react";
 export default function Input({ type, label }) {
   // hook/useState to update inputs value
   const [userInput, setInput] = useState("");
+  // decided not too make a seperate file for the hook
 
   return (
     <div className="mt-4 flex flex-col">
