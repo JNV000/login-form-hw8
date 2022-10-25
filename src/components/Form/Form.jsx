@@ -22,7 +22,7 @@ export default function Form({ inputs, button }) {
   }
 
   return (
-    <form className="mx-auto mt-2 max-w-xs">
+    <form className="mx-auto mt-2 max-w-xs" onSubmit={handleSubmit}>
       {inputs.map((inputNum) => (
         <Input key={inputNum.id} label={inputNum.label} type={inputNum.type} />
       ))}
