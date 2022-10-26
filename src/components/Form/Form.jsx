@@ -16,7 +16,7 @@ function renderInputs(fields) {
 export default function Form({ inputs, button }) {
   // useRef might be awkward as the inputs are seperate components we call
   // however a form knows about its own inputs so we don't need them
-  function HandleSubmitnoRef(event) {
+  function handleSubmitNoRef(event) {
     event.preventDefault();
     const thisForm = event.target;
     inputs.forEach((crntInput) =>
@@ -26,7 +26,7 @@ export default function Form({ inputs, button }) {
   }
 
   return (
-    <form className="mx-auto mt-2 max-w-xs" onSubmit={HandleSubmitnoRef}>
+    <form className="mx-auto mt-2 max-w-xs" onSubmit={handleSubmitNoRef}>
       {inputs.map((inputNum) => (
         <Input key={inputNum.id} label={inputNum.label} type={inputNum.type} />
       ))}
